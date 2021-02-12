@@ -5,7 +5,7 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt install -y nodejs subversion
 
 ## start
-RUN svn checkout https://github.com/MichaelMims/NotesApp/trunk/back-end
+RUN svn checkout https://github.com/MichaelMims/Dogs/trunk/back-end
 RUN mkdir app 
 RUN cp -r back-end /app
 
