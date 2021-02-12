@@ -1,0 +1,24 @@
+services:
+  react:
+    build: ./Dog_Adoption_React
+    hostname: react
+    ports:
+      - "3000:3000"
+    environment: :
+      - REACT_APP_API_BASE_URL=http://Express:3000
+    container_name: React
+    networks:
+      - mynetwork
+  
+  express:
+    build: ./Dog_Adoption_Express
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    container_name: Express
+    networks:
+      - mynetwork
+  
+networks:
+  - mynetwork
